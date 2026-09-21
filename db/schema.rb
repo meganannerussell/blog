@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_09_21_071024) do
+ActiveRecord::Schema[8.1].define(version: 2026_09_21_120224) do
   create_table "post_tags", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "post_id", null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_21_071024) do
     t.datetime "created_at", null: false
     t.string "email"
     t.string "name"
-    t.string "role"
+    t.string "role", default: "reader", null: false
     t.datetime "updated_at", null: false
   end
 
