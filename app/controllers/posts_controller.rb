@@ -2,13 +2,11 @@ class PostsController < ApplicationController
   skip_forgery_protection
 
   def index
-    posts = Post.all
-    render json: posts
+    @posts = Post.all
   end
 
   def show
-    post = Post.find(params[:id])
-    render json: post
+    @post = Post.find(params[:id])
   end
 
   def create
